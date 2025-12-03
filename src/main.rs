@@ -7,6 +7,11 @@ fn divide(a: u8, b: u8) -> Result<u8, &'static str> {
     }
 }
 
+// Option enum is used for values that can be optional
+fn is_pos_even(n: i8) -> Option<bool> {
+    if n < 0 { None } else { Some(n % 2 == 0) }
+}
+
 fn main() {
     println!("---------------------");
 
@@ -114,4 +119,18 @@ fn main() {
         Ok(result) => println!("{a} / {b} = {}", result),
         Err(e) => println!("Error: {}", e),
     }
+
+    println!("---------------------");
+
+    // Demonstrate is_pos_even function with Option
+    let numbers: [i8; 5] = [4, -3, 7, 0, -10];
+    for &num in &numbers {
+        match is_pos_even(num) {
+            Some(true) => println!("{} is positive and even", num),
+            Some(false) => println!("{} is positive and odd", num),
+            None => println!("{} is negative", num),
+        }
+    }
+
+    println!("---------------------");
 }
