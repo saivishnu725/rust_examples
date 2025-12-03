@@ -1,8 +1,8 @@
 # rust-example
 
-a rust project where all the basics (possibly more) of Rust is run.
+a rust project where all the basics (possibly more) of Rust is run
 
-can be used as a cheatsheet once finished (mostly).
+can be used as a cheatsheet once finished (mostly)
 
 ## running the repo
 ```bash
@@ -15,17 +15,17 @@ can be used as a cheatsheet once finished (mostly).
 
 ## concepts covered (so far)
 
-1. variables and mutability
-2. arrays
-3. tuples
-4. strings
-5. string slice (&str)
-6. loops 
-    * for 
-    * while 
-    * loop 
-7. error handling 
-    * Result enum for recoverable errors 
-    * panic! macro for unrecoverable errors 
-    * passing on the error from a fn to the fn call using `Result` enum -> `divide(u8, u8)` 
-    * passing on the error (technically speaking, its a lack of content) from a fn to the fn call using `Option` enum -> `is_os_even(i32)` 
+1. variables and mutability (`let mut a: i32 = 10;`)
+2. arrays (`[i32; 5]`)
+3. tuples (`(i32, f32, char, &str, String, bool)`)
+4. strings (`String`)
+5. string slice (`&str`)
+6. loops
+    * `for`
+    * `while`
+    * `loop`
+7. error handling
+    * `Result` enum for *recoverable* errors
+    * `panic!` macro for *unrecoverable* errors
+    * *passing* on the error from a fn to the fn call using `Result` enum -> `divide(u8, u8)`
+    * *passing* on the error (technically speaking, its a lack of content) from a fn to the fn call using `Option` enum -> `is_os_even(i32)`
