@@ -1,3 +1,12 @@
+// Result enum is used for error handling
+fn divide(a: i8, b: i8) -> Result<i8, &'static str> {
+    if b == 0 {
+        Err("Division by zero")
+    } else {
+        Ok(a / b)
+    }
+}
+
 fn main() {
     println!("---------------------");
 
@@ -69,4 +78,40 @@ fn main() {
     }
 
     println!("---------------------");
+
+    // error handling
+    // let num: Result<i32, &str> = Ok(10); // change to Err to see error
+    let num: Result<i32, &str> = Err("An error occurred"); // uncomment to see error case
+    match num {
+        Ok(n) => println!("The number is: {}", n),
+        Err(e) => println!("Error: {}", e), // handle the error without crashing
+    }
+
+    println!("---------------------");
+
+    // unrecoverable error (panic!)
+    // change the condition to true to see panic
+    let condition = false; // change to true to see panic
+    // let condition = true; // uncomment to see panic
+    if condition {
+        panic!("This is a panic! The program will crash.");
+    } else {
+        println!("No panic occurred. Program continues.");
+    }
+
+    println!("---------------------");
+
+    // Demonstrate divide function with error handling
+    let mut a: i8 = 50;
+    let mut b: i8 = 5;
+    match divide(a, b) {
+        Ok(result) => println!("{a} / {b} = {}", result),
+        Err(e) => println!("Error: {}", e),
+    }
+    a = 5;
+    b = 0;
+    match divide(a, b) {
+        Ok(result) => println!("{a} / {b} = {}", result),
+        Err(e) => println!("Error: {}", e),
+    }
 }
