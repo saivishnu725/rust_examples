@@ -29,3 +29,7 @@ can be used as a cheatsheet once finished (mostly)
     * `panic!` macro for *unrecoverable* errors
     * *passing* on the error from a fn to the fn call using `Result` enum -> `divide(u8, u8)`
     * *passing* on the error (technically speaking, its a lack of content) from a fn to the fn call using `Option` enum -> `is_os_even(i32)`
+
+## license
+
+[GNU General Public License v2.0](https://choosealicense.com/licenses/gpl-2.0/)
