@@ -108,7 +108,7 @@ fn main() {
 
     println!("---------------------");
 
-    // Demonstrate divide function with error handling
+    // demonstrate divide function with error handling
     let mut a: u8 = 50;
     let mut b: u8 = 5;
     match divide(a, b) {
@@ -124,7 +124,7 @@ fn main() {
 
     println!("---------------------");
 
-    // Demonstrate is_pos_even function with Option
+    // demonstrate is_pos_even function with Option
     let numbers: [i8; 5] = [4, -3, 7, 0, -10];
     for &num in &numbers {
         match is_pos_even(num) {
@@ -135,6 +135,4 @@ fn main() {
     }
 
     println!("---------------------");
-
-    //
 }
