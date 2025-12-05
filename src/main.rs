@@ -136,4 +136,17 @@ fn main() {
     }
 
     println!("---------------------");
+
+    // demonstrate structures
+    struct Person {
+        name: String,
+        age: u8,
+    }
+    let p1 = Person {
+        name: String::from("alice"),
+        age: 30,
+    };
+    println!("person struct: name = {}, age = {}", p1.name, p1.age);
+
+    println!("---------------------");
 }
