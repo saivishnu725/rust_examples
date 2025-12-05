@@ -162,5 +162,29 @@ fn main() {
         Color::_Green => println!("color is green"),
         Color::_Blue => println!("color is blue"),
     }
+
+    println!("---------------------");
+
+    // demonstrate pattern matching
+    let value: u8 = 30;
+    match value {
+        1 => println!("value is 1"),
+        2 => println!("value is 2"),
+        3 | 4 => println!("value is 3 or 4"),
+        _ => println!("value is something else"),
+    }
+
+    // let num_vec: Vec<u8> = vec![]; // empty vector
+    // let num_vec: Vec<u8> = vec![10]; // single element
+    // let num_vec: Vec<u8> = vec![10, 20]; // only two elements
+    let num_vec: Vec<u8> = vec![10, 20, 30, 40, 50]; // vec of size 5
+    match &num_vec[..] {
+        [] => println!("empty vector"),
+        [first, second, rest @ ..] => {
+            println!("first = {}, second = {}, rest = {:?}", first, second, rest)
+        }
+        _ => println!("vector has fewer than two elements"),
+    }
+
     println!("---------------------");
 }
