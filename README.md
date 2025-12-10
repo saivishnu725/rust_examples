@@ -1,4 +1,4 @@
-# rust-example
+# rust_notes
 
 a rust project where all the basics (possibly more) of Rust is run
 
@@ -6,7 +6,7 @@ can be used as a cheatsheet once finished (mostly)
 
 ## running the repo
 ```bash
-    git clone https://github.com/saivishnu725/rust_examples svnu_rust
+    git clone https://github.com/saivishnu725/rust_notes svnu_rust
     cd svnu_rust
     cargo run
 ```
